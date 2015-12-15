@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_edt_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/login_logo" />
+
+    <LinearLayout
+        android:id="@+id/ll_edt_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/activity_login__ll_edt_container"
+        android:background="@drawable/input_bg"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt_username"
+            style="@style/activity_login__edt"
+            android:drawableLeft="@drawable/login_icon_account"
+            android:drawableStart="@drawable/login_icon_account"
+            android:hint="@string/activity_login__edt_username_hint" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_login__view_seperator"
+            android:background="@drawable/base_horization_line" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            style="@style/activity_login__edt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_login__edt_height"
+            android:drawableLeft="@drawable/login_icon_password"
+            android:drawableStart="@drawable/login_icon_password"
+            android:hint="@string/activity_login__edt_password_hint"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login__btn_login"
+        android:layout_below="@+id/ll_edt_container"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="@string/activity_login__btn_login"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_large" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_login_ll_tv_register_container"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_login__ll_tv_register_container_marginbottom"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/activity_login__tv_register_1"
+            android:textColor="#9fa0a0"
+            android:textSize="@dimen/activity_login__tv_register" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_login__tv_register_margin_left"
+            android:layout_marginStart="@dimen/activity_login__tv_register_margin_left"
+            android:text="@string/activity_login__tv_register_2"
+            android:textColor="#489cfa"
+            android:textSize="@dimen/activity_login__tv_register" />
+    </LinearLayout>
+
+</RelativeLayout>
