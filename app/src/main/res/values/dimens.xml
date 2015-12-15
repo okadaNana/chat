@@ -10,5 +10,5 @@
     <dimen name="activity_login__tv_register">20sp</dimen>
     <dimen name="activity_login__tv_register_margin_left">5dp</dimen>
     <dimen name="activity_login__ll_tv_register_container_marginbottom">20dp</dimen>
-    <item name="activity_login__view_seperator" type="dimen" format="float">0.5dp</item>
+    <dimen name="activity_login__view_seperator">0.5dp</dimen>
 </resources>
