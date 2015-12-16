@@ -25,7 +25,8 @@
             style="@style/activity_login__edt"
             android:drawableLeft="@drawable/login_icon_account"
             android:drawableStart="@drawable/login_icon_account"
-            android:hint="@string/activity_login__edt_username_hint" />
+            android:hint="@string/activity_login__edt_username_hint"
+            android:singleLine="true" />
 
         <View
             android:layout_width="match_parent"

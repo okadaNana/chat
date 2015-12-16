@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 
 import com.owen.chat.R;
@@ -45,13 +46,15 @@ public class LoginActivity extends BaseActivity {
         }
 
         String username = mEdtUsername.getText().toString();
-        String password = mEdtUsername.getText().toString();
+        String password = mEdtPassword.getText().toString();
 
         if (TextUtils.isEmpty(username)) {
             showToast(R.string.username_cannot_be_null);
+            return;
         }
         if (TextUtils.isEmpty(password)) {
             showToast(R.string.password_cannot_be_null);
+            return;
         }
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
@@ -66,6 +69,8 @@ public class LoginActivity extends BaseActivity {
         mUserManager.login(user, new SaveListener() {
             @Override
             public void onSuccess() {
+                progressDialog.setMessage("登录成功");
+                updateUserInfo();
                 progressDialog.dismiss();
                 MainActivity.actionStart(LoginActivity.this);
             }
@@ -74,7 +79,8 @@ public class LoginActivity extends BaseActivity {
             public void onFailure(int errorCode, String msg) {
                 progressDialog.dismiss();
                 BmobLog.i(msg);
-//                showToast(msg);
+                Log.d("Tag", "errorCode=" + errorCode + ",msg=" + msg);
+                showToast(R.string.username_or_password_error);
             }
         });
     }

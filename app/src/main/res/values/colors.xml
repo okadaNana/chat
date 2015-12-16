@@ -3,4 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">@android:color/darker_gray</color>
+    <color name="tab_btn_text_press">#4f9ef6</color>
+    <color name="tab_btn_text_normal">#9da0a4</color>
 </resources>

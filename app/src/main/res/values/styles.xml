@@ -21,4 +21,14 @@
         <item name="android:textColorHint">#ffdddddd</item>
     </style>
 
+    <style name="activity_main__tab_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/top_bar</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:textColor">@drawable/tab_btn_text_color_selector</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
 </resources>

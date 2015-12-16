@@ -7,7 +7,7 @@ import com.owen.chat.R;
 
 /**
  * 启动页
- *
+ * <p/>
  * Created by mike on 15/12/15.
  */
 public class SplashActivity extends BaseActivity {
@@ -20,7 +20,11 @@ public class SplashActivity extends BaseActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                LoginActivity.actionStart(SplashActivity.this);
+                if (mUserManager.getCurrentUser() != null) {
+                    MainActivity.actionStart(SplashActivity.this);
+                } else {
+                    LoginActivity.actionStart(SplashActivity.this);
+                }
             }
         }, 2000);
     }

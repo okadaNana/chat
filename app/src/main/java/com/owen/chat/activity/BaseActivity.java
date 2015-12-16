@@ -28,13 +28,34 @@ public class BaseActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if (mToast == null) {
-                    mToast = Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_SHORT);
+                    mToast = Toast.makeText(getApplicationContext(), resId, Toast.LENGTH_LONG);
                 } else {
                     mToast.setText(resId);
                 }
                 mToast.show();;
             }
         });
+    }
+
+    protected void showToast(final String text) {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                if (mToast == null) {
+                    mToast = Toast.makeText(getApplicationContext(), text, Toast.LENGTH_LONG);
+                } else {
+                    mToast.setText(text);
+                }
+                mToast.show();;
+            }
+        });
+    }
+
+    /**
+     * 用于登陆或者自动登陆情况下的用户资料及好友资料的检测更新
+     */
+    protected void updateUserInfo() {
+
     }
 
 }
