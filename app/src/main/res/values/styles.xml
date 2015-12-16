@@ -21,6 +21,7 @@
         <item name="android:textColorHint">#ffdddddd</item>
     </style>
 
+<<<<<<< HEAD
     <style name="activity_register__ll_input_conatiner">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">48dp</item>
@@ -49,6 +50,16 @@
         <item name="android:layout_marginStart">10dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:background">@android:color/transparent</item>
+=======
+    <style name="activity_main__tab_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/top_bar</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:textColor">@drawable/tab_btn_text_color_selector</item>
+        <item name="android:textSize">12sp</item>
+>>>>>>> a4debcfffd2c7257de263b8c605df30cedc4599a
     </style>
 
 </resources>

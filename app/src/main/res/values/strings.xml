@@ -9,5 +9,11 @@
     <string name="username_cannot_be_null">用户名不能为空</string>
     <string name="password_cannot_be_null">密码不能为空</string>
     <string name="username_or_password_error">帐号或密码错误</string>
+<<<<<<< HEAD
     <string name="on_loging">正在登陆</string>
+=======
+    <string name="activity_main__tab_btn_message">会话</string>
+    <string name="activity_main__tab_btn_contact">联系人</string>
+    <string name="activity_main__tab_btn_setting">设置</string>
+>>>>>>> a4debcfffd2c7257de263b8c605df30cedc4599a
 </resources>

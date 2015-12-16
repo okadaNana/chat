@@ -3,6 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">@android:color/darker_gray</color>
+<<<<<<< HEAD
     <color name="theme_bg_color">#f0f2f5</color>
     <color name="base_color_white">@android:color/white</color>
+=======
+    <color name="tab_btn_text_press">#4f9ef6</color>
+    <color name="tab_btn_text_normal">#9da0a4</color>
+>>>>>>> a4debcfffd2c7257de263b8c605df30cedc4599a
 </resources>

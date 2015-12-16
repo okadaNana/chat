@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.widget.EditText;
 
 import com.owen.chat.R;
@@ -48,10 +49,19 @@ public class LoginActivity extends BaseActivity {
         String password = mEdtPassword.getText().toString();
 
         if (TextUtils.isEmpty(username)) {
+<<<<<<< HEAD
             mEdtUsername.setError(getString(R.string.username_cannot_be_null));
         }
         if (TextUtils.isEmpty(password)) {
             mEdtPassword.setError(getString(R.string.password_cannot_be_null));
+=======
+            showToast(R.string.username_cannot_be_null);
+            return;
+        }
+        if (TextUtils.isEmpty(password)) {
+            showToast(R.string.password_cannot_be_null);
+            return;
+>>>>>>> a4debcfffd2c7257de263b8c605df30cedc4599a
         }
 
         final ProgressDialog progressDialog = DialogUtils.createProgressDialog(this, getString(R.string.on_loging));
@@ -63,6 +73,8 @@ public class LoginActivity extends BaseActivity {
         mUserManager.login(user, new SaveListener() {
             @Override
             public void onSuccess() {
+                progressDialog.setMessage("登录成功");
+                updateUserInfo();
                 progressDialog.dismiss();
                 MainActivity.actionStart(LoginActivity.this);
             }
@@ -70,6 +82,11 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onFailure(int errorCode, String msg) {
                 progressDialog.dismiss();
+<<<<<<< HEAD
+=======
+                BmobLog.i(msg);
+                Log.d("Tag", "errorCode=" + errorCode + ",msg=" + msg);
+>>>>>>> a4debcfffd2c7257de263b8c605df30cedc4599a
                 showToast(R.string.username_or_password_error);
             }
         });

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/theme_bg_color"
@@ -50,5 +51,9 @@
         android:text="注册"
         android:textColor="@color/base_color_white"
         android:textSize="@dimen/text_size_large" />
+=======
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+>>>>>>> a4debcfffd2c7257de263b8c605df30cedc4599a
 
 </LinearLayout>
