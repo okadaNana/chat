@@ -21,6 +21,7 @@ public class SplashActivity extends BaseActivity {
             @Override
             public void run() {
                 LoginActivity.actionStart(SplashActivity.this);
+                finish();
             }
         }, 2000);
     }

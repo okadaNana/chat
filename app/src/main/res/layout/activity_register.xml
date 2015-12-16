@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/activity_register__ll_input_conatiner">
+
+        <TextView
+            style="@style/activity_register__tv_input"
+            android:text="帐号" />
+
+        <EditText
+            android:id="@+id/edt_username"
+            style="@style/activity_resiger__edt_input"
+            android:text="请输入用户名" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/activity_register__ll_input_conatiner">
+
+        <TextView
+            style="@style/activity_register__tv_input"
+            android:text="密码" />
+
+        <EditText
+            android:id="@+id/edt_password"
+            style="@style/activity_resiger__edt_input"
+            android:text="请输入密码" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/activity_register__ll_input_conatiner">
+
+        <TextView
+            style="@style/activity_register__tv_input"
+            android:text="确认密码" />
+
+        <EditText
+            android:id="@+id/edt_password_again"
+            style="@style/activity_resiger__edt_input"
+            android:text="请再次输入密码" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/btn_login_selector"
+        android:text="注册"
+        android:textColor="@color/base_color_white"
+        android:textSize="@dimen/text_size_large" />
+
+</LinearLayout>

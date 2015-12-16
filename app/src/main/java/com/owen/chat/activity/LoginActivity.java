@@ -10,11 +10,11 @@ import android.widget.EditText;
 import com.owen.chat.R;
 import com.owen.chat.bean.User;
 import com.owen.chat.util.CommonUtils;
+import com.owen.chat.util.DialogUtils;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import cn.bmob.im.util.BmobLog;
 import cn.bmob.v3.listener.SaveListener;
 
 /**
@@ -45,19 +45,16 @@ public class LoginActivity extends BaseActivity {
         }
 
         String username = mEdtUsername.getText().toString();
-        String password = mEdtUsername.getText().toString();
+        String password = mEdtPassword.getText().toString();
 
         if (TextUtils.isEmpty(username)) {
-            showToast(R.string.username_cannot_be_null);
+            mEdtUsername.setError(getString(R.string.username_cannot_be_null));
         }
         if (TextUtils.isEmpty(password)) {
-            showToast(R.string.password_cannot_be_null);
+            mEdtPassword.setError(getString(R.string.password_cannot_be_null));
         }
 
-        final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("正在登陆...");
-        progressDialog.setCanceledOnTouchOutside(false);
-        progressDialog.setCancelable(false);
+        final ProgressDialog progressDialog = DialogUtils.createProgressDialog(this, getString(R.string.on_loging));
         progressDialog.show();
 
         User user = new User();
@@ -73,8 +70,7 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onFailure(int errorCode, String msg) {
                 progressDialog.dismiss();
-                BmobLog.i(msg);
-//                showToast(msg);
+                showToast(R.string.username_or_password_error);
             }
         });
     }
